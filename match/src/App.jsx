@@ -1,29 +1,31 @@
 import React from 'react';
-import Header from './components/header'
+import Header from './components/header';
 
 import './App.css';
+import Images from "./components/Cards/images";
+import pictures from '..src/images.json'
 
-// function App() {
-//   return (
-//     <React.Fragment>
-//       <header>Match!</header>
-//     </React.Fragment>
-//   );
-// }
+
 
 class App extends React.Component {
+
+  state = {
+    
+  }
  
-handleIncrement = () => {
-  this.setState({ score: this.state.score + 1})
-}
+
 
   render(){
     return (
     <React.Fragment>
-      <Header>
+      <Header />
     
-      </Header>
+<Images></Images>
+      
     </React.Fragment>
+
+    
+    
     )
   }
 }
