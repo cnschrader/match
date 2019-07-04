@@ -2,7 +2,7 @@ import React from 'react';
 // import Header from './components/header';
 
 import './App.css';
-import Images from "./components/Cards/images";
+import Images from "./components/Cards";
 import pictures from '../src/images.json'
 
 
