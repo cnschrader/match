@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/header'
 
 import './App.css';
 
@@ -11,11 +12,7 @@ import './App.css';
 // }
 
 class App extends React.Component {
-state = {
-  score: 0,
-  bestScore: 0
-}
-
+ 
 handleIncrement = () => {
   this.setState({ score: this.state.score + 1})
 }
@@ -23,9 +20,9 @@ handleIncrement = () => {
   render(){
     return (
     <React.Fragment>
-      <span>Score: {this.state.score}</span>
-      
-      <span>Best Score: {this.state.bestScore}</span>
+      <Header>
+    
+      </Header>
     </React.Fragment>
     )
   }
