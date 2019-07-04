@@ -1,5 +1,6 @@
 import React from 'react';
-// import Header from './components/header';
+
+import Wrapper from "./components/Wrapper";
 
 import './App.css';
 import Images from "./components/Cards";
@@ -26,15 +27,28 @@ class App extends React.Component {
             <span className="navbar-brand mb-0 h1"> Best Score: {this.state.bestScore}</span>
           </nav>
         </React.Fragment>
-
-        {this.state.pictures.map(picture => (
+        
+        <Wrapper>{this.state.pictures.map(picture => (
+          
           <Images
           id={picture.id}
           image={picture.image}
            />
-        ))}
+           
+           
+           
+           
+           
+           
+           
+           
+           ))}
+
+           </Wrapper>
+        
 
       </React.Fragment>
+
 
 
 

@@ -3,14 +3,24 @@ import "./style.css"
 
 
 function Images(props) {
-    return (
-        <div className="card">
-        <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      </div>
+  return (
 
-    )
+
+    <div className="card">
+      <div className="img-container">
+
+        <div className="img-container">
+          <img alt={props.name} src={props.image} />
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  )
 }
 
 export default Images;
