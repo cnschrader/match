@@ -29,8 +29,8 @@ class App extends React.Component {
 
         {this.state.pictures.map(picture => (
           <Images
-          id={pictures.id}
-          image={pictures.image}
+          id={picture.id}
+          image={picture.image}
            />
         ))}
 
