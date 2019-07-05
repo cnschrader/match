@@ -11,7 +11,9 @@ function Images(props) {
 
         <div className="img-container">
           <img alt={props.name} src={props.image} />
+          <button></button>
         </div>
+        
       </div>
     </div>
 
