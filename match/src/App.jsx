@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   shuffle = pictures => {
-   
+    console.log('shuffling');
     let i,
         j,
         temp;
@@ -47,8 +47,10 @@ class App extends React.Component {
           <Images
 
           
-            id={picture.id}
-            image={picture.image}
+          key={picture.id}
+          id={picture.id}
+          image={picture.image}
+          shuffle={this.shuffle}
             
           />
         ))}

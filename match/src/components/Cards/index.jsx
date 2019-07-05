@@ -2,37 +2,28 @@ import React from "react";
 import "./style.css"
 // import pictures from '../src/images.json'
 
-class Images extends React.Component{
+function Images(props) {
+  return (
 
-  // state = {
-  //   pictures,
-    
-  // }
 
-  render(props) {
-    return (
+    <div className="card">
+      <div className="img-container">
 
-    
-      <div className="card">
-        
-        
-          <div className="img-container">
-          <button>
-           <img alt={props.name} src={props.image} />
-            
+        <div className="img-container">
+        <button onClick={props.shuffle}>
+          <img alt={props.name} src={props.image} />
           </button>
-          </div>
-          
+        </div>
+        
       </div>
-      
-  
-  
-  
-  
-  
-  
-    )
-  }
+    </div>
+
+
+
+
+
+
+  )
 }
 
 
