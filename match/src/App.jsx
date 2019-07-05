@@ -45,6 +45,7 @@ class App extends React.Component {
         <Wrapper>{this.state.pictures.map(picture => (
 
           <Images
+
           
             id={picture.id}
             image={picture.image}
