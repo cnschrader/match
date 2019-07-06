@@ -36,6 +36,13 @@ class App extends React.Component {
 
   handleClick = () => {
 
+    if(this.state.images.find(this.state.pictures.id === true )){
+      this.setState({ score: 0})
+      if(this.state.score > this.state.bestScore){
+        this.setState({ score: this.state.bestScore})
+      }
+    }
+    
   }
 
 
