@@ -15,20 +15,20 @@ class App extends React.Component {
     score: 0,
     bestScore: 0,
     images: []
-    
+
   }
 
   shuffle = () => {
     console.log('shuffling');
-   const pictures = this.state.pictures;
+    const pictures = this.state.pictures;
     let i,
-        j,
-        temp;
+      j,
+      temp;
     for (i = pictures.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = pictures[i];
-        pictures[i] = pictures[j];
-        pictures[j] = temp;
+      j = Math.floor(Math.random() * (i + 1));
+      temp = pictures[i];
+      pictures[i] = pictures[j];
+      pictures[j] = temp;
     }
     console.log(pictures)
     return this.setState({ pictures })
@@ -36,13 +36,18 @@ class App extends React.Component {
 
   handleClick = () => {
 
-    if(this.state.images.find(this.state.pictures.id === true )){
-      this.setState({ score: 0})
-      if(this.state.score > this.state.bestScore){
-        this.setState({ score: this.state.bestScore})
+    if (this.state.images.find(this.state.pictures.id === true)) {
+      this.setState({ score: 0 })
+      if (this.state.score > this.state.bestScore) {
+        this.setState({ score: this.state.bestScore })
       }
+      images.push(this.state.pictures)
+      score++;
+      this.shuffle;
     }
+
     
+
   }
 
 
@@ -61,12 +66,12 @@ class App extends React.Component {
 
           <Images
 
-          
-          key={picture.id}
-          id={picture.id}
-          image={picture.image}
-          shuffle={this.shuffle}
-            
+
+            key={picture.id}
+            id={picture.id}
+            image={picture.image}
+            shuffle={this.shuffle}
+
           />
         ))}
 
