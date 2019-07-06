@@ -7,7 +7,7 @@ function Images(props) {
 
 
     <div className="card">
-      <div className="img-container">
+      
 
         <div className="img-container">
         <button onClick={props.shuffle}>
@@ -15,7 +15,7 @@ function Images(props) {
           </button>
         </div>
         
-      </div>
+      
     </div>
 
 

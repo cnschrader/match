@@ -35,16 +35,18 @@ class App extends React.Component {
   }
 
   handleClick = () => {
-
+    
     if (this.state.images.find(this.state.pictures.id === true)) {
       this.setState({ score: 0 })
       if (this.state.score > this.state.bestScore) {
         this.setState({ score: this.state.bestScore })
       }
-      images.push(this.state.pictures)
-      score++;
-      this.shuffle;
     }
+    
+    this.setState({  images: this.state.images.push(this.state.pictures) })
+    this.setState({ score: this.state.score + 1 })
+    this.shuffle();
+    console.log(this.state.images)
 
     
 
@@ -71,6 +73,7 @@ class App extends React.Component {
             id={picture.id}
             image={picture.image}
             shuffle={this.shuffle}
+            handleClick={this.handleClick}
 
           />
         ))}
