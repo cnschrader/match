@@ -13,11 +13,14 @@ class App extends React.Component {
   state = {
     pictures,
     score: 0,
-    bestScore: 0
+    bestScore: 0,
+    images: []
+    
   }
 
-  shuffle = pictures => {
+  shuffle = () => {
     console.log('shuffling');
+   const pictures = this.state.pictures;
     let i,
         j,
         temp;
@@ -27,7 +30,12 @@ class App extends React.Component {
         pictures[i] = pictures[j];
         pictures[j] = temp;
     }
-    return this.setState({ pictures: this.state.pictures})
+    console.log(pictures)
+    return this.setState({ pictures })
+  }
+
+  handleClick = () => {
+
   }
 
 
@@ -70,3 +78,18 @@ class App extends React.Component {
 
 
 export default App;
+
+
+// handleClick method
+// -- make hc a prop = this.handleclick
+// -- pass into the onClick on image component. 
+
+// Handleclick
+// empty array in state called images. ==> all images user clicks on. 
+// 1.Check if what the users clicked on is already in the images array array.find. or looping. 
+// 2. if its true, games over.
+// 3. check if current score, better than best. 
+// - if it is, set current score to best score.
+// 4. push to image array if its not in the array.
+// 5. increment score by 1. 
+// 6. call this.shuffle. 
