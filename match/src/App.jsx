@@ -42,7 +42,7 @@ class App extends React.Component {
 
 
     if (images.find(function(name){
-      return name
+      return 
     })) {
       this.setState({ score: 0 })
       if (score > bestScore) {
