@@ -10,7 +10,10 @@ function Images(props) {
       
 
         <div className="img-container">
-        <button onClick={props.shuffle}>
+        <button onClick={() => props.handleClick(props.name)}>
+
+
+
           <img alt={props.name} src={props.image} />
           </button>
         </div>
