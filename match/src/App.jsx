@@ -39,19 +39,38 @@ class App extends React.Component {
     const images = this.state.images
     const score = this.state.score
     const bestScore = this.state.bestScore
+    const pictures = this.state.pictures
 
-
-    if (images.find(function(name){
-      return 
-    })) {
-      this.setState({ score: 0 })
-      if (score > bestScore) {
-        this.setState({ score: bestScore })
-      }
-    }
     
-    images.push(clickedImage)
-    this.setState({  images  })
+  
+
+    
+    for(let i = 0; i < images.length; i++)
+    {
+        if(images[i] === pictures.name){
+          this.setState({
+            score: 0
+          })
+        }
+        if(score > bestScore){
+          this.setState({ bestScore: score})
+        }
+    }
+  
+  
+    
+    // if (images.find(function(clickedImage){
+      //   return clickedImage
+      // })) {
+        //   this.setState({ score: 0 })
+        //   if (score > bestScore) {
+          //     this.setState({ score: bestScore })
+          //   }
+          // }
+          
+          images.push(clickedImage)
+          console.log(clickedImage)
+          this.setState({  images  })
     this.setState({ score: this.state.score + 1 })
     this.shuffle();
     console.log(images)
