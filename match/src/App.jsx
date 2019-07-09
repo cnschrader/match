@@ -37,8 +37,8 @@ class App extends React.Component {
   handleClick = (clickedImage) => {
 
     const images = this.state.images
-    const score = this.state.score
-    const bestScore = this.state.bestScore
+    // const score = this.state.score
+    // const bestScore = this.state.bestScore
     const pictures = this.state.pictures
 
     
@@ -47,26 +47,22 @@ class App extends React.Component {
     
     for(let i = 0; i < images.length; i++)
     {
-        if(images[i] === pictures.name){
-          this.setState({
-            score: 0
-          })
+        if(images[i] === pictures.id){
+          this.gameReset()
         }
-        if(score > bestScore){
-          this.setState({ bestScore: score})
-        }
-    }
+      }
+       
   
   
     
     // if (images.find(function(clickedImage){
-      //   return clickedImage
-      // })) {
-        //   this.setState({ score: 0 })
-        //   if (score > bestScore) {
-          //     this.setState({ score: bestScore })
-          //   }
-          // }
+    //     return clickedImage
+    //   })) {
+    //       this.setState({ score: 0 })
+    //       if (score > bestScore) {
+    //           this.setState({ bestScore: score })
+    //         }
+    //       }
           
           images.push(clickedImage)
           console.log(clickedImage)
@@ -77,6 +73,15 @@ class App extends React.Component {
 
     
 
+  }
+
+  gameReset = () => {
+    let score = this.state.score
+    let bestScore = this.state.bestScore
+    this.setState({ score: 0})
+    if(score > bestScore){
+      this.setState({ bestScore: score})
+    }
   }
 
 

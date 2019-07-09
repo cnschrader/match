@@ -10,7 +10,7 @@ function Images(props) {
       
 
         <div className="img-container">
-        <button onClick={() => props.handleClick(props.name)}>
+        <button onClick={() => props.handleClick(props.id)}>
 
 
 
