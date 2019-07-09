@@ -49,7 +49,7 @@ class App extends React.Component {
     
     for(let i = 0; i < images.length; i++)
     {
-        if(images.includes(pictures.id)){
+        if(images.includes(clickedImage)){
           this.gameReset()
         }
        
