@@ -37,20 +37,22 @@ class App extends React.Component {
   handleClick = (clickedImage) => {
 
     const images = this.state.images
-    // const score = this.state.score
     // const bestScore = this.state.bestScore
     const pictures = this.state.pictures
-
-    console.log(pictures.id)
-
     
-  
-
+    console.log(pictures.id)
+    
+    
+    this.initialState = this.state
+    
     
     for(let i = 0; i < images.length; i++)
     {
+       
         if(images.includes(clickedImage)){
+          this.setState({ score: this.initialState })
           this.gameReset()
+       
         }
        
       
@@ -82,12 +84,13 @@ class App extends React.Component {
   gameReset = () => {
     let score = this.state.score
     let bestScore = this.state.bestScore
-    this.setState({ score: 0})
+    this.setState({ score: 0 })
     if(score > bestScore){
       this.setState({ bestScore: score})
     }
   }
 
+  
 
 
   render() {
