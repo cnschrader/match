@@ -41,15 +41,19 @@ class App extends React.Component {
     // const bestScore = this.state.bestScore
     const pictures = this.state.pictures
 
+    console.log(pictures.id)
+
     
   
 
     
     for(let i = 0; i < images.length; i++)
     {
-        if(images[i] === pictures.id){
+        if(images.includes(pictures.id)){
           this.gameReset()
         }
+       
+      
       }
        
   
