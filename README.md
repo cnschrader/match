@@ -18,3 +18,10 @@ This is a front-end only application, so all you need to do is clone the reposit
 
 `https://github.com/cnschrader/match.git`
 
+## Updates to the app
+
+There are some updates that will be implemented such as:
+
+- styling the photos to be smaller, and so the picture is more easily seen.
+- adding more photos so the game will be more difficult. 
+
